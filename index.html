@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<button class="btn btn-success" onclick="changeIframeSrc('home.html')">Home</button>
+<button class="btn btn-success" onclick="changeIframeSrc('IE.html')">Image embedding</button>
+<button class="btn btn-success" onclick="changeIframeSrc('IS.html')">Image segmentation</button>
+<button class="btn btn-success" onclick="changeIframeSrc('OD.html')">Object detection</button>
+<button class="btn btn-success" onclick="changeIframeSrc('PLD.html')">Pose landmark detection</button>
+<button class="btn btn-success" onclick="changeIframeSrc('ITS.html')">Interactive segmentation</button>
+  <iframe src="home.html" id="mainframe" style="width: 100vw; height: 95vh; border: none;"></iframe>
+<script>
+   function changeIframeSrc(newSrc) {
+      const iframe = document.getElementById('mainframe');
+      iframe.src = newSrc;
+   }
+</script>
+</body>
+</html>

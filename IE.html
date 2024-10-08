@@ -1,0 +1,55 @@
+<!-- Copyright 2023 The MediaPipe Authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+<link rel="stylesheet" type="text/css" href="webstyle.css">
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script type="module" src="Image-embedding.js"></script>
+<h1>Measure image similarity using the MediaPipe Image Embedder task</h1>
+<section id="demos" class="invisible">
+  <h2>Demo: Embedding Images</h2>
+  <p><b>Click on an image below</b> to calculate the similarity between the two images.</p>
+  <div style="display: block;">
+    <div class="embedOnClick">
+      <img src=" https://assets.codepen.io/9177687/dog_flickr_publicdomain.jpeg" width="100%" crossorigin="anonymous" title="Click to get embeddings and cosine similarity" />
+      <p id="embed1" class="embedding removed">
+    </div>
+    <div class="embedOnClick">
+      <img src="https://assets.codepen.io/9177687/cat_flickr_publicdomain.jpeg" width="100%" crossorigin="anonymous" title="Click to get embeddings and cosine similarity" />
+      <p id="embed2" class="embedding removed">
+    </div>
+  </div>
+
+  <p id="im_result" class="removed"></p>
+
+  <h2>Demo: Webcam continuous cosine similarity</h2>
+  <p>Upload an image as the reference image and continuously calculate its similarity to video frames captured by your webcam! Upload an image by clicking <b>Upload Image</b>, and then click <b>Enable Webcam</b> and accept access to the webcam.</p>
+  <p>Tip: if you want to see two similar images, take a photo with your webcam, and then compare it to streaming webcam video</p>
+
+  <div class="uploadImage">
+    <button id="uploadImageButton" class="mdc-button mdc-button--raised" onclick="document.getElementById('getFile').click()">
+      <span class="mdc-button__ripple"></span>
+      <span class="mdc-button__label">UPLOAD IMAGE</span>
+    </button>
+    <input id="getFile" type="file" accept="image/*" style="display:none">
+    <img id="uploadImage" width=100%></img>
+  </div>
+  <div class="videoView">
+    <button id="webcamButton" class="mdc-button mdc-button--raised">
+      <span class="mdc-button__ripple"></span>
+      <span class="mdc-button__label">ENABLE WEBCAM</span>
+    </button>
+    <video id="webcam" autoplay playsinline></video>
+  </div>
+  <p id="video_result" class="removed"></p>
+</section>
