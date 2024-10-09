@@ -14,9 +14,7 @@
 
 import {
   ObjectDetector,
-  FilesetResolver//,
-  //Detection,
-  //ObjectDetectionResult
+  FilesetResolver
 } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.2";
 
   const demosSection = document.getElementById("demos");
