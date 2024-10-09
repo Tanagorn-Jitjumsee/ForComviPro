@@ -14,18 +14,18 @@
 
 import { ImageSegmenter, SegmentationMask, FilesetResolver } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.2";
 
-// Get DOM elements
-const video = document.getElementById("webcam") ;
+const video = document.getElementById("webcam");
 const canvasElement = document.getElementById("canvas");
 const canvasCtx = canvasElement.getContext("2d");
 const webcamPredictions = document.getElementById("webcamPredictions");
-const demosSection: HTMLElement = document.getElementById("demos");
-let enableWebcamButton: HTMLButtonElement;
-let webcamRunning: Boolean = false;
-const videoHeight: string = "360px";
-const videoWidth: string = "480px";
+const demosSection = document.getElementById("demos");
+let enableWebcamButton;
+let webcamRunning = false;
+const videoHeight = "360px";
+const videoWidth = "480px";
 let runningMode: "IMAGE" | "VIDEO" = "IMAGE";
 const resultWidthHeigth = 256;
+
 
 let imageSegmenter;
 let labels;
