@@ -16,27 +16,36 @@ limitations under the License. -->
 <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
-<h1>Multiple object detection using the MediaPipe Object Detector task</h1>
+<body>
+  <nav class="menu-bar">
+    <div class="group">
+      <a class="item title" href="Member.html">Home</a>
+    </div>
+    <div class="group">
+      <a class="item" href="Object.html">ObjectDetection</a>
+      <a class="item" href="Image.html">ImageSegment</a>
+      <a class="item" href="hand.html">HandLandmarker</a>
+      <a class="item" href="face_landmark.html">FaceLandmarker</a>
+      <a class="item" href="face_detec.html">FaceDetection</a>
+    </div>
+  </nav>
+  <h1>Hand Landmark Detection Using the MediaPipe HandLandmarker</h1> <!-- Changed heading -->
 
-<section id="demos">
-  <h2>Demo: Detecting Images</h2>
-  <p><b>Click on an image below</b> to detect objects in the image.</p>
+  <section id="demos" class="invisible">
+    <h2>Demo: Webcam Continuous Hand Landmarks Detection</h2> <!-- Changed heading -->
+    <p>Hold your hand in front of your webcam to get real-time hand landmarker detection.<br>Click <b>enable webcam</b> below and grant access to the webcam if prompted.</p> <!-- Updated instructions -->
 
-  <div class="detectOnClick">
-    <img src="https://assets.codepen.io/9177687/coupledog.jpeg" width="100%" crossorigin="anonymous" title="Click to get classification!" />
-  </div>
-  <div class="detectOnClick">
-    <img src="https://assets.codepen.io/9177687/doggo.jpeg" width="100%" crossorigin="anonymous" title="Click to get classification!" />
-  </div>
-
-  <h2>Demo: Webcam continuous detection</h2>
-  <p>Hold some objects up close to your webcam to get a real-time detection! When ready click "enable webcam" below and accept access to the webcam.</p>
-  <div>This demo uses a model trained on the COCO dataset. It can identify 80 different classes of object in an image. <a href="https://github.com/amikelive/coco-labels/blob/master/coco-labels-2014_2017.txt" target="_blank">See a list of available classes</a></div>
-  <div id="liveView" class="videoView">
-    <button id="webcamButton" class="mdc-button mdc-button--raised">
-      <span class="mdc-button__ripple"></span>
-      <span class="mdc-button__label">ENABLE WEBCAM</span>
-    </button>
-    <video id="webcam" autoplay playsinline></video>
-  </div>
-</section>
+    <div id="liveView" class="videoView">
+      <button id="webcamButton" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label">ENABLE WEBCAM</span>
+      </button>
+      <div style="position: relative;">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas class="output_canvas" id="output_canvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
+      </div>
+    </div>
+    <!-- Removed the blend shapes section as it's not needed for hand landmark detection -->
+  </section>
+</body>
+</html>
