@@ -12,11 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { ImageSegmenter
-        //,SegmentationMask
-        //,FilesetResolver 
-       } 
-  rom "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.2";
+import { ImageSegmenter, SegmentationMask, FilesetResolver } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.2";
 
 // Get DOM elements
 const video = document.getElementById("webcam") ;
