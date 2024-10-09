@@ -13,12 +13,12 @@
 // limitations under the License.
 
 import {
-    ObjectDetector,
-    FilesetResolver,
-    Detection,
-    ObjectDetectionResult
-  } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.2";
+  ObjectDetector,
+  FilesetResolver,
   
+  ObjectDetectionResult
+} from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.2";
+
   const demosSection = document.getElementById("demos");
   
   let objectDetector;
