@@ -115,6 +115,12 @@ async function handleClick(event) {
 }
 
 function callback(result) {
+  document.addEventListener("DOMContentLoaded", function() {
+  enableWebcamButton = document.getElementById("webcamButton");
+  if (enableWebcamButton) {
+    enableWebcamButton.addEventListener("click", enableCam);
+  }
+});
   const cxt = canvasClick.getContext("2d");
   const { width, height } = result.categoryMask;
   let imageData = cxt.getImageData(0, 0, width, height).data;
