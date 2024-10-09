@@ -16,7 +16,7 @@ import { ImageSegmenter, SegmentationMask, FilesetResolver } from "https://cdn.j
 
 // Get DOM elements
 const video = document.getElementById("webcam") ;
-const canvasElement = document.getElementById("canvas")t;
+const canvasElement = document.getElementById("canvas");
 const canvasCtx = canvasElement.getContext("2d");
 const webcamPredictions = document.getElementById("webcamPredictions");
 const demosSection: HTMLElement = document.getElementById("demos");
